@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const LoginScreen(), // Rute untuk layar login
         '/register': (context) => RegisterPage(), // Rute untuk layar registrasi
-        '/home': (context) => HomePage(), // Rute untuk layar home
+        '/home': (context) => HomeScreen(), // Rute untuk layar home
         // '/lupaPw': (context) => LupaPwPage(), // Rute untuk layar lupa password
       },
     );

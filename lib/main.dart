@@ -124,10 +124,10 @@ class _HomeScreenState extends State<HomeScreen> {
             left: 10.0,
             right: 0,
             child: Container(
-              height: 200.0,
+              height: 100.0,
               child: Image.asset(
-                'image/Banner.png',
-                fit: BoxFit.cover,
+              'assets/images/wedus.jpg',
+              fit: BoxFit.cover,
               ),
             ),
           ),

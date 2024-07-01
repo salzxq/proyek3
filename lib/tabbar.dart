@@ -4,6 +4,7 @@ import 'favorite.dart';  // Import the favorite.dart file
 import 'notifikasi_order.dart';
 import 'profile.dart';
 import 'main.dart';
+import 'login_page.dart';
 
 
 class NavigationMenu extends StatefulWidget {
@@ -17,6 +18,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
+    LoginScreen(),
     HomeScreen(),
     OrderSummaryPage(),  // Include OrderSummaryPage
     Favorite(),
