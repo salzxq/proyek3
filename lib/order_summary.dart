@@ -204,20 +204,3 @@ class _OrderSummaryPageState extends State<OrderSummaryPage> {
     return Center(child: Text('Penitipan')); // Placeholder for Penitipan
   }
 }
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'HEKUO',
-      theme: ThemeData(
-        primarySwatch: Colors.green,
-      ),
-      home: OrderSummaryPage(),
-    );
-  }
-}
