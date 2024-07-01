@@ -4,6 +4,8 @@ import 'order_summary.dart';  // Import the OrderSummaryPage
 import 'favorite.dart';  // Import the favorite.dart file
 import 'notifikasi_order.dart';
 import 'profile.dart';
+import 'main.dart';
+
 
 class NavigationMenu extends StatefulWidget {
   const NavigationMenu({super.key});
@@ -16,6 +18,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
+    HomeScreen(),
     OrderSummaryPage(),  // Include OrderSummaryPage
     Favorite(),
     notifikasi_order(),
@@ -35,6 +38,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_sharp), label: 'Keranjang'),
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorite'),
           BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Notifikasi'),
           BottomNavigationBarItem(icon: Icon(Icons.account_box), label: 'Profile'),
