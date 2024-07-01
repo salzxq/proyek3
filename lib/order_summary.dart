@@ -85,20 +85,7 @@ class _OrderSummaryPageState extends State<OrderSummaryPage> {
             child: _selectedTab == 0 ? buildOrderSummary(context) : buildPenitipan(),
           ),
         ],
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.create), label: 'Penitipan'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorites'),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Notifications'),
-        ],
-        selectedItemColor: Colors.green,
-        currentIndex: 0, // Set the current index to Home
-        onTap: (index) {
-          // Handle navigation logic here
-        },
-      ),
+      )
     );
   }
 
@@ -141,7 +128,7 @@ class _OrderSummaryPageState extends State<OrderSummaryPage> {
             SizedBox(height: 16),
             Card(
               child: ListTile(
-                leading: Image.network('https://example.com/kambing.jpg', width: 50, height: 50, fit: BoxFit.cover), // Replace with your image URL
+                leading: Image.network('https://www.durvet.com/wp-content/uploads/2018/10/boer-goat-2273921_1920-edit-880x520.jpg', width: 50, height: 50, fit: BoxFit.cover), // Replace with your image URL
                 title: Text('Kambing'),
                 subtitle: Text('Putih coklat'),
                 trailing: Row(
@@ -239,7 +226,7 @@ class _OrderSummaryPageState extends State<OrderSummaryPage> {
             SizedBox(height: 16),
             Card(
               child: ListTile(
-                leading: Image.network('https://example.com/kambing.jpg', width: 50, height: 50, fit: BoxFit.cover), // Replace with your image URL
+                leading: Image.network('https://www.durvet.com/wp-content/uploads/2018/10/boer-goat-2273921_1920-edit-880x520.jpg', width: 50, height: 50, fit: BoxFit.cover), // Replace with your image URL
                 title: Text('Kambing'),
                 subtitle: Text('Putih coklat'),
                 trailing: Row(
