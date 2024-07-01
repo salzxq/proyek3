@@ -1,45 +1,43 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
-import 'favorite.dart'; // Import the favorite.dart file
-import 'notifikasi_order.dart';
-import 'Profile.dart';
+import 'order_summary_page.dart';  // Import the new file
 
-class NavigationMenu extends StatefulWidget {
-  const NavigationMenu({super.key});
-
+class TabBarPage extends StatefulWidget {
   @override
-  _NavigationMenuState createState() => _NavigationMenuState();
+  _TabBarPageState createState() => _TabBarPageState();
 }
 
-class _NavigationMenuState extends State<NavigationMenu> {
-  int _currentIndex = 0;
-
-  final List<Widget> _pages = [
-    HomeScreen(),
-    Favorite(),
-    Notifikasi_order(),
-    Profile(),
+class _TabBarPageState extends State<TabBarPage> {
+  int _selectedIndex = 0;
+  static const List<Widget> _widgetOptions = <Widget>[
+    Text('Home Page'),
+    OrderSummaryPage(),  // Include the OrderSummaryPage
+    Text('Favorites Page'),
+    Text('Notifications Page'),
   ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorite'),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Notifikasi'),
-          BottomNavigationBarItem(icon: Icon(Icons.account_box), label: 'Profile'),
-        ],
+      body: Center(
+        child: _widgetOptions.elementAt(_selectedIndex),
       ),
-      body: _pages[_currentIndex],
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.create), label: 'Penitipan'),
+          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorites'),
+          BottomNavigationBarItem(icon: Icon(Icons.notifications), label: 'Notifications'),
+        ],
+        currentIndex: _selectedIndex,
+        selectedItemColor: Colors.green,
+        onTap: _onItemTapped,
+      ),
     );
   }
 }
