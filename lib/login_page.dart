@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'register_page.dart';
 // import 'lupaPw.dart';
 import 'home_page.dart';
+import 'main.dart';
 
 void main() {
   runApp(const MyApp());
