@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:proyek3/login_page.dart';
 import 'order_summary.dart';  // Import the OrderSummaryPage
 import 'favorite.dart';  // Import the favorite.dart file
 import 'notifikasi_order.dart';
@@ -22,7 +23,7 @@ class _NavigationMenuState extends State<NavigationMenu> {
     HomeScreen(),
     OrderSummaryPage(),  // Include OrderSummaryPage
     Favorite(),
-    Notifikasi_order(),
+    notifikasi_order(),
     Profile(),
   ];
 
