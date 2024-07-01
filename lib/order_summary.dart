@@ -201,6 +201,101 @@ class _OrderSummaryPageState extends State<OrderSummaryPage> {
   }
 
   Widget buildPenitipan() {
-    return Center(child: Text('Penitipan')); // Placeholder for Penitipan
+    return SingleChildScrollView(
+      child: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Identitas Pembeli', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            SizedBox(height: 8),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Rijal Muhammad'),
+                    Text('0821239988'),
+                    Text('Jl. Siliwangi no 34 rt. 07 rw. 06'),
+                    Row(
+                      children: [
+                        TextButton.icon(
+                          onPressed: () {},
+                          icon: Icon(Icons.edit),
+                          label: Text('Edit Alamat'),
+                        ),
+                        TextButton.icon(
+                          onPressed: () {},
+                          icon: Icon(Icons.note_add),
+                          label: Text('Tambahkan Catatan'),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 16),
+            Card(
+              child: ListTile(
+                leading: Image.network('https://example.com/kambing.jpg', width: 50, height: 50, fit: BoxFit.cover), // Replace with your image URL
+                title: Text('Kambing'),
+                subtitle: Text('Putih coklat'),
+                trailing: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    IconButton(icon: Icon(Icons.remove), onPressed: () {}),
+                    Text('1'),
+                    IconButton(icon: Icon(Icons.add), onPressed: () {}),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 16),
+            TextButton(
+              onPressed: () {},
+              child: Row(
+                children: [
+                  Icon(Icons.timelapse),
+                  SizedBox(width: 8),
+                  Text('Pilih penitipan harian,bulanan,tahunan'),
+                  Spacer(),
+                  Icon(Icons.arrow_forward_ios),
+                ],
+              ),
+            ),
+            Divider(),
+            ListTile(
+              title: Text('Ringkasan Pembayaran'),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Harga: Rp. 3.000.000'),
+                  Text('Biaya Penitipan: Rp. 500.000'), // Added "Biaya Penitipan"
+                  Text('Biaya Pengiriman: Rp. 50.000'),
+                  Text('Total Pembayaran: Rp. 3.550.000'), // Updated total
+                ],
+              ),
+            ),
+            SizedBox(height: 8),
+            ListTile(
+              leading: Icon(Icons.attach_money),
+              title: Text('Cash'),
+              subtitle: Text('Rp. 3.550.000'), // Updated total
+            ),
+            SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('Order'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.green),
+                minimumSize: MaterialStateProperty.all(Size(double.infinity, 50)),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
