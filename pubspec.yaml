@@ -61,15 +61,15 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  assets:
-    - image/Banner.png
-    - image/variasi.png
-    - image/variasi2.png
-    - image/Hewan Qurban.png
-    - image/hewan kurban2.png
-    - image/hewan kurban3.png
-    - image/sapi1.png
-    - image/sapi2.png
+  # assets:
+  #   - image/Banner.png
+  #   - image/variasi.png
+  #   - image/variasi2.png
+  #   - image/Hewan Qurban.png
+  #   - image/hewan kurban2.png
+  #   - image/hewan kurban3.png
+  #   - image/sapi1.png
+    # - image/sapi2.png
 
   # To add assets to your application, add an assets section, like this:
   assets:
