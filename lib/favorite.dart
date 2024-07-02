@@ -128,8 +128,10 @@ class SapiGrid extends StatelessWidget {
 
   SapiGrid({required this.navigateToDetail});
   final List<String> sapiImages = [
-    'assets/image/sapi1.png',
-    'assets/image/sapi2.png',
+    'image/sapi1.png',
+    'image/sapi2.png',
+    'image/sapi1.png',
+    'image/sapi2.png',
   ];
 
   @override
@@ -159,8 +161,10 @@ class KambingGrid extends StatelessWidget {
 
   KambingGrid({required this.navigateToDetail});
 final List<String> kambingImages = [
-    'assets/image/hewan kurban2.png',
-    'assets/image/hewan kurban3.png',
+    'image/hewan kurban2.png',
+    'image/hewan kurban3.png',
+    'image/hewan kurban2.png',
+    'image/hewan kurban3.png',
   ];
 
   @override
