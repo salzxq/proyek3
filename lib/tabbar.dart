@@ -5,6 +5,7 @@
 // import 'notifikasi_order.dart';
 // import 'profile.dart';
 // import 'main.dart';
+// import 'login_page.dart';
 
 
 // class NavigationMenu extends StatefulWidget {
@@ -23,6 +24,12 @@
 //     // Favorite(),
 //     // notifikasi_order(),
 //     // Profile(),
+//     LoginScreen(),
+//     HomeScreen(),
+//     OrderSummaryPage(),  // Include OrderSummaryPage
+//     Favorite(),
+//     notifikasi_order(),
+//     Profile(),
 //   ];
 
 //   @override
